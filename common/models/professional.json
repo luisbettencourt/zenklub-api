@@ -1,0 +1,53 @@
+{
+  "name": "professional",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "ratingValue": {
+      "type": "number"
+    },
+    "ratingCount": {
+      "type": "number"
+    },
+    "rateValue": {
+      "type": "number"
+    },
+    "rateCurrency": {
+      "type": "string"
+    },
+    "rateInterval": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "timeslots": {
+      "type": "hasMany",
+      "model": "timeslot",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
